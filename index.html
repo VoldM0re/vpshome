@@ -15,58 +15,61 @@
     <main>
         <h1><span id="vold">Vold</span>More's Projects</h1>
         <div class="apps">
-            <a href="https://voldmore.fun/jscalc/" class="app">
-                <span class="app-icon">🔢</span>
-                <span class="app-title">Калькулятор на JS</span>
+            <a href="https://voldmore.fun/ToDo/" class="app">
+                <img class="app-icon" src="ToDo/src/svg/favicon.svg">
+                <span class="app-title">Заметки ToDo</span>
             </a>
             <a href="https://voldmore.fun/absencelist/" class="app">
-                <span class="app-icon">📝</span>
+                <span class="app-icon">‍🎓</span>
                 <span class="app-title">Список отсутствующих</span>
+            </a>
+            <a href="https://voldmore.fun/Posty/" class="app">
+                <img class="app-icon" src="Posty/src/icons/logo.svg">
+                <span class="app-title">Posty!</span>
             </a>
             <a href="https://voldmore.fun/Quiz/" class="app">
                 <span class="app-icon">🎮</span>
                 <span class="app-title">Тест по Minecraft</span>
             </a>
+            <a href="https://voldmore.fun/jscalc/" class="app">
+                <span class="app-icon">🔢</span>
+                <span class="app-title">Калькулятор на JS</span>
+            </a>
         </div>
     </main>
     <style>
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
 
         body {
-            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #fff;
-            background: linear-gradient(45deg, #151515, #1a1a1a),
-                radial-gradient(circle at center,
-                    rgba(204, 155, 243, 0.05) 0%,
-                    rgba(21, 21, 21, 0.9) 100%);
-            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            padding: 50px;
             font-size: 22pt;
-            overflow: hidden;
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            background: linear-gradient(45deg, #151515, #1a1a1a), radial-gradient(circle at center, rgba(204, 155, 243, 0.05) 0%, rgba(21, 21, 21, 0.9) 100%);
         }
 
         main {
+            z-index: 2;
             position: relative;
-            width: 85%;
-            max-width: 1200px;
-            /* min-height: 75vh; */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             gap: 50px;
+            max-width: 80%;
             padding: 4rem;
             background: rgba(23, 23, 23, 0.95);
+            border: 1px solid rgba(204, 155, 243, 0.07);
             border-radius: 30px;
             box-shadow: 0 8px 32px 0 rgba(144, 113, 171, 0.1);
-            border: 1px solid rgba(204, 155, 243, 0.07);
-            z-index: 2;
         }
 
         h1 {
@@ -81,9 +84,9 @@
 
         .apps {
             display: flex;
-            gap: 30px;
             flex-wrap: wrap;
             justify-content: center;
+            gap: 30px;
         }
 
         .app {
@@ -91,32 +94,37 @@
             flex-direction: column;
             align-items: center;
             gap: 15px;
-            min-width: 250px;
+            width: 400px;
             padding: 30px 40px;
+            font-weight: 600;
+            color: inherit;
+            text-decoration: none;
             background: rgba(25, 25, 25, 0.95);
             border: 1px solid rgba(204, 155, 243, 0.07);
             border-radius: 20px;
-            color: inherit;
-            font-weight: 600;
-            text-decoration: none;
+            transition: 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
             cursor: pointer;
             user-select: none;
-            transition: 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
         }
 
         .app-icon {
+            display: flex;
+            justify-content: center;
+            width: 80px;
+            height: 100%;
             font-size: 2em;
             opacity: 0.9;
         }
 
         .app-title {
             font-size: 0.8em;
+            text-align: center;
         }
 
         .app:hover {
-            transform: translateY(-5px);
             background: rgba(30, 30, 30, 0.95);
             border-color: rgba(204, 155, 243, 0.15);
+            transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(204, 155, 243, 0.07);
         }
 
@@ -125,6 +133,10 @@
         }
 
         @media (max-width: 1200px) {
+            body {
+                padding: 10% 5%;
+            }
+
             main {
                 width: 90%;
                 padding: 3rem;
@@ -137,13 +149,15 @@
 
         @media (max-width: 768px) {
             body {
-                padding: 20px;
+                padding: 0;
             }
 
             main {
                 width: 100%;
+                max-width: 100%;
                 min-height: auto;
                 padding: 2rem;
+                border-radius: 0;
             }
 
             h1 {
@@ -174,31 +188,12 @@
             }
 
             .app-icon {
+                width: 60px;
                 font-size: 1.5em;
             }
 
             .app-title {
                 font-size: 0.7em;
-            }
-        }
-
-        @media (max-height: 940px) and (max-width: 768px) {
-            body {
-                padding: 0;
-            }
-
-            main {
-                border-radius: 0;
-                height: 100vh;
-            }
-
-            .app {
-                width: 100%;
-                height: auto;
-                min-width: auto;
-                padding: 20px;
-                border-color: rgba(204, 155, 243, 0.15);
-                background: rgba(23, 23, 23, 0.95);
             }
         }
     </style>
