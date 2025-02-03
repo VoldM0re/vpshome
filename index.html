@@ -39,37 +39,40 @@
     </main>
     <style>
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         body {
+            padding: 50px;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            padding: 50px;
-            font-size: 22pt;
-            font-family: 'Poppins', sans-serif;
             color: #fff;
-            background: linear-gradient(45deg, #151515, #1a1a1a), radial-gradient(circle at center, rgba(204, 155, 243, 0.05) 0%, rgba(21, 21, 21, 0.9) 100%);
+            background: linear-gradient(45deg, #151515, #1a1a1a),
+                radial-gradient(circle at center,
+                    rgba(204, 155, 243, 0.05) 0%,
+                    rgba(21, 21, 21, 0.9) 100%);
+            font-family: 'Poppins', sans-serif;
+            font-size: 22pt;
         }
 
         main {
-            z-index: 2;
             position: relative;
+            max-width: 80%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             gap: 50px;
-            max-width: 80%;
             padding: 4rem;
             background: rgba(23, 23, 23, 0.95);
-            border: 1px solid rgba(204, 155, 243, 0.07);
             border-radius: 30px;
             box-shadow: 0 8px 32px 0 rgba(144, 113, 171, 0.1);
+            border: 1px solid rgba(204, 155, 243, 0.07);
+            z-index: 2;
         }
 
         h1 {
@@ -84,9 +87,9 @@
 
         .apps {
             display: flex;
+            gap: 30px;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 30px;
         }
 
         .app {
@@ -96,24 +99,24 @@
             gap: 15px;
             width: 400px;
             padding: 30px 40px;
-            font-weight: 600;
-            color: inherit;
-            text-decoration: none;
             background: rgba(25, 25, 25, 0.95);
             border: 1px solid rgba(204, 155, 243, 0.07);
             border-radius: 20px;
-            transition: 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+            color: inherit;
+            font-weight: 600;
+            text-decoration: none;
             cursor: pointer;
             user-select: none;
+            transition: 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
         }
 
         .app-icon {
-            display: flex;
-            justify-content: center;
-            width: 80px;
-            height: 100%;
             font-size: 2em;
             opacity: 0.9;
+            height: 100%;
+            width: 80px;
+            display: flex;
+            justify-content: center;
         }
 
         .app-title {
@@ -122,9 +125,9 @@
         }
 
         .app:hover {
+            transform: translateY(-5px);
             background: rgba(30, 30, 30, 0.95);
             border-color: rgba(204, 155, 243, 0.15);
-            transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(204, 155, 243, 0.07);
         }
 
@@ -154,9 +157,9 @@
 
             main {
                 width: 100%;
-                max-width: 100%;
                 min-height: auto;
                 padding: 2rem;
+                max-width: 100%;
                 border-radius: 0;
             }
 
@@ -188,8 +191,8 @@
             }
 
             .app-icon {
-                width: 60px;
                 font-size: 1.5em;
+                width: 60px;
             }
 
             .app-title {
